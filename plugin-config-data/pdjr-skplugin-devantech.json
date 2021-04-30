@@ -2,6 +2,7 @@
   "enabled": true,
   "enableLogging": false,
   "configuration": {
+    "metainjectorfifo": "/tmp/meta-injector",
     "switchpath": "electrical.switches.bank.{m}.{c}",
     "modules": [
       {

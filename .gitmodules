@@ -1,3 +1,42 @@
 [submodule "node_modules/pdjr-skplugin-alarm-manager"]
 	path = node_modules/pdjr-skplugin-alarm-manager
 	url = https://github.com/preeve9534/pdjr-skplugin-alarm-manager
+[submodule "node_modules/pdjr-skplugin-devantech"]
+	path = node_modules/pdjr-skplugin-devantech
+	url = https://github.com/preeve9534/pdjr-skplugin-devantech
+[submodule "node_modules/pdjr-skplugin-meta-injector"]
+	path = node_modules/pdjr-skplugin-meta-injector
+	url = https://github.com/preeve9534/pdjr-skplugin-meta-injector
+[submodule "node_modules/pdjr-skplugin-process-scheduler"]
+	path = node_modules/pdjr-skplugin-process-scheduler
+	url = https://github.com/preeve9534/pdjr-skplugin-process-scheduler
+[submodule "node_modules/pdjr-skplugin-renotifier"]
+	path = node_modules/pdjr-skplugin-renotifier
+	url = https://github.com/preeve9534/pdjr-skplugin-renotifier
+[submodule "node_modules/pdjr-skplugin-sunphases"]
+	path = node_modules/pdjr-skplugin-sunphases
+	url = https://github.com/preeve9534/pdjr-skplugin-sunphases
+[submodule "node_modules/pdjr-skplugin-switchbank"]
+	path = node_modules/pdjr-skplugin-switchbank
+	url = https://github.com/preeve9534/pdjr-skplugin-switchbank
+[submodule "node_modules/pdjr-skplugin-switchlogic"]
+	path = node_modules/pdjr-skplugin-switchlogic
+	url = https://github.com/preeve9534/pdjr-skplugin-switchlogic
+[submodule "node_modules/pdjr-skplugin-tank-monitor"]
+	path = node_modules/pdjr-skplugin-tank-monitor
+	url = https://github.com/preeve9534/pdjr-skplugin-tank-monitor
+[submodule "node_modules/pdjr-skplugin-threshold-notifier"]
+	path = node_modules/pdjr-skplugin-threshold-notifier
+	url = https://github.com/preeve9534/pdjr-skplugin-threshold-notifier
+[submodule "node_modules/pdjr-skwebapp-switch-monitor"]
+	path = node_modules/pdjr-skwebapp-switch-monitor
+	url = https://github.com/preeve9534/pdjr-skwebapp-switch-monitor
+[submodule "node_modules/pdjr-skwebapp-tank-monitor"]
+	path = node_modules/pdjr-skwebapp-tank-monitor
+	url = https://github.com/preeve9534/pdjr-skwebapp-tank-monitor
+[submodule "node_modules/signalk-controller"]
+	path = node_modules/signalk-controller
+	url = https://github.com/preeve9534/signalk-controller
+[submodule "node_modules/signalk-panel"]
+	path = node_modules/signalk-panel
+	url = https://github.com/preeve9534/signalk-panel
