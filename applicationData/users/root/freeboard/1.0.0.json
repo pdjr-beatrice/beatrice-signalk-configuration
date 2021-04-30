@@ -1,0 +1,84 @@
+{
+  "experiments": false,
+  "version": "",
+  "darkMode": {
+    "enabled": false,
+    "source": 0
+  },
+  "map": {
+    "zoomLevel": 14,
+    "center": [
+      4.999784972365091,
+      51.87058775772695
+    ],
+    "rotation": 0,
+    "mrid": "EPSG:3857",
+    "srid": "EPSG:4326",
+    "moveMap": false,
+    "northUp": true,
+    "animate": false
+  },
+  "vesselTrail": false,
+  "vesselWindVectors": true,
+  "aisTargets": true,
+  "courseData": true,
+  "notes": true,
+  "popoverMulti": false,
+  "mapDoubleClick": false,
+  "depthAlarm": {
+    "enabled": false,
+    "smoothing": 10000
+  },
+  "anchorRadius": 40,
+  "plugins": {
+    "instruments": "/@signalk/instrumentpanel",
+    "startOnOpen": false,
+    "parameters": null
+  },
+  "units": {
+    "distance": "m",
+    "depth": "m",
+    "speed": "kn"
+  },
+  "selections": {
+    "routes": [],
+    "waypoints": [],
+    "tracks": [],
+    "charts": [
+      "openstreetmap",
+      "openseamap"
+    ],
+    "notes": [],
+    "chartOrder": [],
+    "headingAttribute": "navigation.headingTrue",
+    "preferredPaths": {
+      "tws": "environment.wind.speedTrue",
+      "twd": "environment.wind.directionTrue",
+      "heading": "navigation.courseOverGroundTrue"
+    },
+    "positionFormat": "XY",
+    "aisTargets": null,
+    "aisWindApparent": false,
+    "aisWindMinZoom": 15,
+    "aisShowTrack": false,
+    "notesMinZoom": 10,
+    "pluginFavourites": [],
+    "trailFromServer": false,
+    "trailDuration": 24,
+    "resourceSets": {}
+  },
+  "resources": {
+    "notes": {
+      "rootFilter": "?position=%map:latitude%,%map:longitude%&dist=%note:radius%",
+      "getRadius": 20,
+      "groupNameEdit": false,
+      "groupRequiresPosition": false
+    },
+    "video": {
+      "enable": false,
+      "url": null
+    },
+    "paths": []
+  },
+  "aisShowTrack": false
+}

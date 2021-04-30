@@ -1,0 +1,79 @@
+{
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false,
+  "configuration": {
+    "interval": 600,
+    "root": "environment.sunphases",
+    "notifications": [
+      {
+        "rangelo": "dawn",
+        "rangehi": "dusk",
+        "inrangenotification": {
+          "key": "daytime"
+        },
+        "outrangenotification": {
+          "key": "nighttime"
+        }
+      }
+    ],
+    "metadata": [
+      {
+        "key": "dawn",
+        "description": "Morning nautical twilight ends, morning civil twilight starts"
+      },
+      {
+        "key": "dusk",
+        "description": "Evening nautical twilight starts"
+      },
+      {
+        "key": "goldenHour",
+        "description": "Evening golden hour starts"
+      },
+      {
+        "key": "goldenHourEnd",
+        "description": "Soft light, best time for photography ends"
+      },
+      {
+        "key": "nadir",
+        "description": "Darkest moment of the night, sun is in the lowest position"
+      },
+      {
+        "key": "nauticalDawn",
+        "description": "Morning nautical twilight starts"
+      },
+      {
+        "key": "nauticalDusk",
+        "description": "Evening astronomical twilight starts"
+      },
+      {
+        "key": "night",
+        "description": "Dark enough for astronomical observations"
+      },
+      {
+        "key": "nightEnd",
+        "description": "Morning astronomical twilight starts"
+      },
+      {
+        "key": "solarNoon",
+        "description": "Sun is at its highest elevation"
+      },
+      {
+        "key": "sunrise",
+        "description": "Top edge of the sun appears on the horizon"
+      },
+      {
+        "key": "sunriseEnd",
+        "description": "Bottom edge of the sun touches the horizon"
+      },
+      {
+        "key": "sunset",
+        "description": "Sun disappears below the horizon, evening civil twilight starts"
+      },
+      {
+        "key": "sunsetStart",
+        "description": "Bottom edge of the sun touches the horizon"
+      }
+    ]
+  }
+}

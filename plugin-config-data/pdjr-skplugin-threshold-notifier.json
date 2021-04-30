@@ -1,0 +1,28 @@
+{
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false,
+  "configuration": {
+    "rules": [
+      {
+        "triggerpath": "tanks.wasteWater.0.currentLevel",
+        "notificationpath": "notifications.tanks.wasteWater.0.currentLevel.override",
+        "enabled": true,
+        "highthreshold": {
+          "value": 0.5,
+          "message": "waste water level is ${comp} ${threshold}: ${action} discharge pump",
+          "state": "alert",
+          "method": [
+            "visual"
+          ]
+        },
+        "lowthreshold": {
+          "value": 0.02,
+          "message": "waste water level is ${comp} ${threshold}: ${action} discharge pump",
+          "state": "normal",
+          "method": []
+        }
+      }
+    ]
+  }
+}

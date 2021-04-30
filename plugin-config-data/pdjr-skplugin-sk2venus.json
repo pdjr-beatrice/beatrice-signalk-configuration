@@ -1,0 +1,15 @@
+{
+  "configuration": {
+    "usegui": false,
+    "services": [
+      {
+        "class": "tank",
+        "path": "tanks.wasteWater.0",
+        "name": "mytank"
+      }
+    ]
+  },
+  "enabled": false,
+  "enableLogging": true,
+  "enableDebug": true
+}

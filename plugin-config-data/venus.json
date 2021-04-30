@@ -1,0 +1,27 @@
+{
+  "configuration": {
+    "installType": "remote",
+    "dbusAddress": "tcp:host=192.168.1.3,port=78",
+    "pollInterval": 20,
+    "usePosition": true,
+    "relayPath0": "electrical.switches.venus.0",
+    "relayPath1": "electrical.switches.venus.1",
+    "blacklist": [
+      "tanks.blackWater.6.capacity",
+      "tanks.blackWater.6.currentLevel",
+      "tanks.freshWater.7.capacity",
+      "tanks.freshWater.7.currentLevel",
+      "tanks.freshWater.8.capacity",
+      "tanks.freshWater.8.currentLevel",
+      "tanks.fuel.10.capacity",
+      "tanks.fuel.10.currentLevel",
+      "tanks.fuel.9.capacity",
+      "tanks.fuel.9.currentLevel"
+    ],
+    "relayDisplayName0": "Generator auto start",
+    "relayDisplayName1": "Victron Venus realy 2"
+  },
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false
+}

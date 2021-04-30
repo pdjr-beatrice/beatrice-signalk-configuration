@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false,
+  "configuration": {
+    "interval": 0,
+    "sudo": true
+  }
+}

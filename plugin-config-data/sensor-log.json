@@ -1,0 +1,484 @@
+{
+  "enabled": false,
+  "enableLogging": false,
+  "configuration": {
+    "databases": [
+      {
+        "name": "acelectrical.rrd",
+        "datasources": [
+          {
+            "name": "chrgcurrent",
+            "path": "electrical.chargers.257.current",
+            "multiplier": 1,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "chrgpower",
+            "path": "electrical.chargers.257.power",
+            "multiplier": 1,
+            "min": 0,
+            "max": 10000
+          },
+          {
+            "name": "chrgvoltage",
+            "path": "electrical.chargers.257.voltage",
+            "multiplier": 1,
+            "min": 0,
+            "max": 300
+          },
+          {
+            "name": "domcurrent",
+            "path": "electrical.inverters.257.acout.current",
+            "multiplier": 1,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "dompower",
+            "path": "electrical.inverters.257.acout.power",
+            "multiplier": 1,
+            "min": 0,
+            "max": 10000
+          },
+          {
+            "name": "domvoltage",
+            "path": "electrical.inverters.257.acout.voltage",
+            "multiplier": 1,
+            "min": 0,
+            "max": 300
+          },
+          {
+            "name": "shoreA",
+            "path": "electrical.inverters.257.acin.current",
+            "multiplier": 1,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "shoreV",
+            "path": "electrical.inverters.257.acin.voltage",
+            "multiplier": 1,
+            "min": 0,
+            "max": 300
+          },
+          {
+            "name": "shoreW",
+            "path": "electrical.inverters.257.acin.power",
+            "multiplier": 1,
+            "min": 0,
+            "max": 10000
+          }
+        ]
+      },
+      {
+        "name": "tanks.rrd",
+        "datasources": [
+          {
+            "name": "freshwaterps",
+            "path": "tanks.freshWater.2.currentLevel",
+            "multiplier": 100,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "freshwatersb",
+            "path": "tanks.freshWater.1.currentLevel",
+            "multiplier": 100,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "fuelps",
+            "path": "tanks.fuel.4.currentLevel",
+            "multiplier": 100,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "fuelsb",
+            "path": "tanks.fuel.3.currentLevel",
+            "multiplier": 100,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "wastewater",
+            "path": "tanks.wasteWater.0.currentLevel",
+            "multiplier": 100,
+            "min": 0,
+            "max": 100
+          }
+        ]
+      }
+    ],
+    "displaygroups": [
+      {
+        "id": "tanks",
+        "title": "Tank Levels",
+        "ylabel": "tank level / %",
+        "ymin": "0",
+        "ymax": "100",
+        "options": [
+          "min",
+          "max",
+          "lst"
+        ],
+        "datasources": [
+          {
+            "datasource": "tanks.rrd:freshwaterps",
+            "displayname": "water (ps)",
+            "color": "#7070ff",
+            "options": []
+          },
+          {
+            "datasource": "tanks.rrd:freshwatersb",
+            "displayname": "water (sb)",
+            "color": "#9090ff",
+            "options": []
+          },
+          {
+            "datasource": "tanks.rrd:fuelps",
+            "displayname": "fuel (sb)",
+            "color": "#ff7070",
+            "options": []
+          },
+          {
+            "datasource": "tanks.rrd:fuelsb",
+            "displayname": "fuel (ps)",
+            "color": "#ff9090",
+            "options": []
+          },
+          {
+            "datasource": "tanks.rrd:wastewater",
+            "displayname": "waste",
+            "color": "#808000",
+            "options": []
+          }
+        ]
+      },
+      {
+        "id": "acpower",
+        "title": "AC Power",
+        "ylabel": "power / W",
+        "ymin": "0",
+        "ymax": "",
+        "options": [
+          "min",
+          "max",
+          "avg",
+          "der",
+          "lst"
+        ],
+        "datasources": [
+          {
+            "datasource": "acelectrical.rrd:chrgpower",
+            "displayname": "charger",
+            "color": "#921a1a",
+            "options": [
+              "area"
+            ]
+          },
+          {
+            "datasource": "acelectrical.rrd:dompower",
+            "displayname": "domestic",
+            "color": "#367bc0",
+            "options": [
+              "area",
+              "stack"
+            ]
+          },
+          {
+            "datasource": "acelectrical.rrd:shoreW",
+            "displayname": "shore",
+            "color": "#ffff00",
+            "options": []
+          }
+        ]
+      },
+      {
+        "id": "acvoltage",
+        "title": "AC Voltage",
+        "ylabel": "voltage / V",
+        "ymin": "0",
+        "ymax": "250",
+        "options": [
+          "min",
+          "max",
+          "avg",
+          "lst"
+        ],
+        "datasources": [
+          {
+            "datasource": "acelectrical.rrd:chrgvoltage",
+            "displayname": "charger",
+            "color": "#921a1a",
+            "options": []
+          },
+          {
+            "datasource": "acelectrical.rrd:domvoltage",
+            "displayname": "domestic",
+            "color": "#367bc0",
+            "options": []
+          },
+          {
+            "datasource": "acelectrical.rrd:shoreV",
+            "displayname": "shore",
+            "color": "#f3970ba",
+            "options": []
+          }
+        ]
+      },
+      {
+        "id": "acpv",
+        "title": "AC Voltage / Power",
+        "ylabel": "",
+        "ymin": "0",
+        "ymax": "",
+        "options": [
+          "min",
+          "max",
+          "avg",
+          "lst"
+        ],
+        "datasources": [
+          {
+            "datasource": "acelectrical.rrd:shoreV",
+            "displayname": "shoreV",
+            "color": "#04fa1f",
+            "options": []
+          },
+          {
+            "datasource": "acelectrical.rrd:shoreA",
+            "displayname": "shoreA",
+            "color": "#f6ee16",
+            "options": []
+          }
+        ]
+      }
+    ],
+    "rrdservices": {
+      "rrdcachedsocket": "/var/rrd/signalk-sensor-log/rrdcached.sock",
+      "rrdchartdport": "9999"
+    },
+    "rrddatabase": {
+      "updateinterval": 10,
+      "directory": "/var/rrd/signalk-sensor-log",
+      "options": [
+        "autocreate"
+      ],
+      "databases": [
+        {
+          "name": "acelectrical.rrd",
+          "datasources": [
+            {
+              "name": "chrgcurrent",
+              "path": "electrical.chargers.257.current",
+              "multiplier": 1,
+              "min": 0,
+              "max": 100
+            },
+            {
+              "name": "chrgpower",
+              "path": "electrical.chargers.257.power",
+              "multiplier": 1,
+              "min": 0,
+              "max": 10000
+            },
+            {
+              "name": "chrgvoltage",
+              "path": "electrical.chargers.257.voltage",
+              "multiplier": 1,
+              "min": 0,
+              "max": 300
+            },
+            {
+              "name": "domcurrent",
+              "path": "electrical.inverters.257.acout.current",
+              "multiplier": 1,
+              "min": 0,
+              "max": 100
+            },
+            {
+              "name": "dompower",
+              "path": "electrical.inverters.257.acout.power",
+              "multiplier": 1,
+              "min": 0,
+              "max": 10000
+            },
+            {
+              "name": "domvoltage",
+              "path": "electrical.inverters.257.acout.voltage",
+              "multiplier": 1,
+              "min": 0,
+              "max": 300
+            },
+            {
+              "name": "shoreA",
+              "path": "electrical.inverters.257.acin.current",
+              "multiplier": 1,
+              "min": 0,
+              "max": 100
+            },
+            {
+              "name": "shoreV",
+              "path": "electrical.inverters.257.acin.voltage",
+              "multiplier": 1,
+              "min": 0,
+              "max": 300
+            },
+            {
+              "name": "shoreW",
+              "path": "electrical.inverters.257.acin.power",
+              "multiplier": 1,
+              "min": 0,
+              "max": 10000
+            }
+          ]
+        },
+        {
+          "name": "tanks.rrd",
+          "datasources": [
+            {
+              "name": "freshwaterps",
+              "path": "tanks.freshWater.2.currentLevel",
+              "multiplier": 100,
+              "min": 0,
+              "max": 100
+            },
+            {
+              "name": "freshwatersb",
+              "path": "tanks.freshWater.1.currentLevel",
+              "multiplier": 100,
+              "min": 0,
+              "max": 100
+            },
+            {
+              "name": "fuelps",
+              "path": "tanks.fuel.4.currentLevel",
+              "multiplier": 100,
+              "min": 0,
+              "max": 100
+            },
+            {
+              "name": "fuelsb",
+              "path": "tanks.fuel.3.currentLevel",
+              "multiplier": 100,
+              "min": 0,
+              "max": 100
+            },
+            {
+              "name": "wastewater",
+              "path": "tanks.wasteWater.0.currentLevel",
+              "multiplier": 100,
+              "min": 0,
+              "max": 100
+            }
+          ]
+        }
+      ],
+      "periods": [
+        {
+          "name": "hour",
+          "tag": "end-1h",
+          "seconds": 3600,
+          "stepfactor": 1,
+          "consolidate": "MAX",
+          "plotticks": 30
+        },
+        {
+          "name": "day",
+          "tag": "end-1d",
+          "seconds": 86400,
+          "stepfactor": 5,
+          "consolidate": "MAX",
+          "plotticks": 55
+        },
+        {
+          "name": "week",
+          "tag": "end-1w",
+          "seconds": 604800,
+          "stepfactor": 34,
+          "consolidate": "AVERAGE",
+          "plotticks": 123
+        },
+        {
+          "name": "month",
+          "tag": "end-1m",
+          "seconds": 2592000,
+          "stepfactor": 144,
+          "consolidate": "AVERAGE",
+          "plotticks": 247
+        },
+        {
+          "name": "year",
+          "tag": "end-1y",
+          "seconds": 31104000,
+          "stepfactor": 1728,
+          "consolidate": "AVERAGE",
+          "plotticks": 1441
+        }
+      ]
+    },
+    "chart": {
+      "generatecharts": true,
+      "directory": "/var/rrd/signalk-sensor-log/charts",
+      "canvascolor": "#000000",
+      "backgroundcolor": "#000000",
+      "fontcolor": "#02dff9"
+    },
+    "logging": {
+      "console": [
+        "updates",
+        "notifications",
+        "errors"
+      ],
+      "syslog": [
+        "warnings",
+        "errors"
+      ]
+    },
+    "paths": [
+      {
+        "path": "electrical.chargers.257.power",
+        "multiplier": 1,
+        "displaygroups": "acpower"
+      },
+      {
+        "path": "electrical.inverters.257.acin.power",
+        "multiplier": 1,
+        "displaygroups": "acpower"
+      },
+      {
+        "path": "electrical.inverters.257.acout.power",
+        "multiplier": 1,
+        "displaygroups": "acpower"
+      },
+      {
+        "path": "tanks.freshWater.1.currentLevel",
+        "multiplier": 100,
+        "displaygroups": "tanks"
+      },
+      {
+        "path": "tanks.freshWater.2.currentLevel",
+        "multiplier": 100,
+        "displaygroups": "tanks"
+      },
+      {
+        "path": "tanks.fuel.3.currentLevel",
+        "multiplier": 100,
+        "displaygroups": "tanks"
+      },
+      {
+        "path": "tanks.fuel.4.currentLevel",
+        "multiplier": 100,
+        "displaygroups": "tanks"
+      },
+      {
+        "path": "tanks.wasteWater.0.currentLevel",
+        "multiplier": 100,
+        "displaygroups": "tanks"
+      }
+    ]
+  }
+}

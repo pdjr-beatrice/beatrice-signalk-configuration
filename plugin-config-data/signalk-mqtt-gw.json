@@ -1,0 +1,16 @@
+{
+  "configuration": {
+    "runLocalServer": false,
+    "port": 1883,
+    "sendToRemote": true,
+    "remoteHost": "mqtt://192.168.1.3",
+    "rejectUnauthorized": false,
+    "paths": [
+      {
+        "path": "navigation.position",
+        "interval": 60
+      }
+    ]
+  },
+  "enabled": true
+}

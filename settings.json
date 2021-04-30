@@ -1,0 +1,49 @@
+{
+  "interfaces": {},
+  "ssl": false,
+  "pipedProviders": [
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA2000",
+            "subOptions": {
+              "type": "ngt-1-canboatjs",
+              "baudrate": 115200,
+              "device": "/dev/ttyS0",
+              "providerId": "Actisense"
+            },
+            "providerId": "Actisense"
+          }
+        }
+      ],
+      "id": "Actisense",
+      "enabled": false
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA2000",
+            "subOptions": {
+              "type": "ngt-1",
+              "baudrate": 115200,
+              "device": "/dev/ttyS0",
+              "providerId": "Actisense2"
+            },
+            "providerId": "Actisense2"
+          }
+        }
+      ],
+      "id": "Actisense2",
+      "enabled": true
+    }
+  ],
+  "security": {
+    "strategy": "./tokensecurity"
+  }
+}

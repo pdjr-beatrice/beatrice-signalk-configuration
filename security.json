@@ -1,0 +1,15 @@
+{
+  "allow_readonly": true,
+  "expiration": "1d",
+  "allowNewUserRegistration": true,
+  "allowDeviceAccessRequests": true,
+  "users": [
+    {
+      "username": "root",
+      "type": "admin",
+      "password": "$2a$10$e/jgdqEgeKHfSAcO5.AD7.oUzr630RO72S8r2Nu9B.YcaqnaICPMS"
+    }
+  ],
+  "devices": [],
+  "secretKey": "4cccc0052259386759ff724acea20605fe80008e64a8cfa57c598c1498dd4a2d047fda429d7039917ec4f8db4951eb14664c79bcf81f4683083146baa4a03dd7035bdfdc1563a97d40d99971b6fc589ea835b6cbebdd6485e83ddf6d4634577407206d6faad450a052890b430b0fc04dd83c665e5c8553bacf7bd53528a2123cd1315e9d57d886d73936a50cf78b8ba6dbc731b3eee742c514482154425d469f44c5260c210f32fa9bd372b1b45730dc86ab851197f99b640082629c12c1277ae4abb810fad6d048f961985ae8d8de88d321de76497a26fc745e3906165aff387b8b8b69548cdfbb5a5987dedbfda2500dfa606367e5ac13fa9691a6e59c048f"
+}

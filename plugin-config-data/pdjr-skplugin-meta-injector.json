@@ -1,0 +1,133 @@
+{
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false,
+  "configuration": {
+    "fifo": "/tmp/meta-injector",
+    "metadata": [
+      {
+        "key": "tanks.",
+        "timeout": 60,
+        "alertMethod": [
+          "visual"
+        ],
+        "warnMethod": [
+          "visual"
+        ],
+        "alarmMethod": [
+          "sound",
+          "visual"
+        ],
+        "emergencyMethod": [
+          "sound",
+          "visual"
+        ]
+      },
+      {
+        "key": "tanks.wasteWater.0.currentLevel",
+        "displayFormat": {
+          "color": "#00FFFF",
+          "factor": 1000,
+          "places": 0
+        },
+        "displayName": "Tank 0 (Waste)",
+        "longName": "Tank 0 (Waste)",
+        "shortName": "Tank 0",
+        "zones": [
+          {
+            "lower": 0.45,
+            "state": "warn",
+            "message": "Tank 0 (Waste) level approaching auto pump-out threshold"
+          },
+          {
+            "lower": 0.5,
+            "state": "alert",
+            "message": "Tank 0 (Waste) level above auto pump-out threshold"
+          },
+          {
+            "lower": 0.8,
+            "state": "alarm",
+            "message": "Tank 0 (Waste) level approaching capacity"
+          },
+          {
+            "lower": 0.9,
+            "state": "emergency",
+            "message": "Tank 0 (Waste) overflow imminent"
+          }
+        ]
+      },
+      {
+        "key": "tanks.freshWater.1.currentLevel",
+        "displayFormat": {
+          "color": "#00FFFF",
+          "factor": 1000,
+          "places": 0
+        },
+        "displayName": "Tank 1 (Water)",
+        "longName": "Tank 1 (SB Water)",
+        "shortName": "Tank 1",
+        "zones": [
+          {
+            "upper": 0.15,
+            "state": "alert",
+            "message": "Tank 1 (Water) approaching empty"
+          }
+        ]
+      },
+      {
+        "key": "tanks.freshWater.2.currentLevel",
+        "displayFormat": {
+          "color": "#00FFFF",
+          "factor": 1000,
+          "places": 0
+        },
+        "displayName": "Tank 2 (Water)",
+        "longName": "Tank 2 (PS Water)",
+        "shortName": "Tank 2",
+        "zones": [
+          {
+            "upper": 0.15,
+            "state": "alert",
+            "message": "Tank 2 (Water) approaching empty"
+          }
+        ]
+      },
+      {
+        "key": "tanks.fuel.3.currentLevel",
+        "displayFormat": {
+          "color": "#FFFF00",
+          "factor": 1000,
+          "places": 0
+        },
+        "displayName": "Tank 3 (Fuel)",
+        "longName": "Tank 3 (SB Fuel)",
+        "shortName": "Tank 3",
+        "zones": [
+          {
+            "upper": 0.15,
+            "state": "alert",
+            "message": "Tank 3 (Fuel) approaching empty"
+          }
+        ]
+      },
+      {
+        "key": "tanks.fuel.4.currentLevel",
+        "displayFormat": {
+          "color": "#FFFF00",
+          "factor": 1000,
+          "places": 0
+        },
+        "displayName": "Tank 4 (Fuel)",
+        "longName": "Tank 4 (PS Fuel)",
+        "shortName": "Tank 4",
+        "zones": [
+          {
+            "upper": 0.15,
+            "state": "alert",
+            "message": "Tank 4 (Fuel) approaching empty"
+          }
+        ]
+      }
+    ]
+  }
+}

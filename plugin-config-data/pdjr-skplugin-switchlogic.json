@@ -1,0 +1,188 @@
+{
+  "enabled": true,
+  "enableLogging": false,
+  "configuration": {
+    "rules": [
+      {
+        "description": "1kW IMMERSION HEATER",
+        "input": "[0,1]",
+        "output": "[10,6]"
+      },
+      {
+        "description": "2kW IMMERSION HEATER",
+        "input": "[0,2]",
+        "output": "[10,5]"
+      },
+      {
+        "description": "CHILLER",
+        "input": "[0,3]",
+        "output": "[10,4]"
+      },
+      {
+        "description": "BOILER",
+        "input": "[0,4]",
+        "output": "[10,3]"
+      },
+      {
+        "description": "THERMAL STORE",
+        "input": "[0,5]",
+        "output": "[10,2]"
+      },
+      {
+        "description": "HOT-WATER LOOP",
+        "input": "[0,6] or notifications.controller.loop",
+        "output": "[26,1]"
+      },
+      {
+        "description": "HYDROPHORE",
+        "input": "[0,7]",
+        "output": "[10,1]"
+      },
+      {
+        "description": "WORK LIGHTS",
+        "input": "[0,8]",
+        "output": "[15,4]"
+      },
+      {
+        "description": "ANCHOR LIGHT",
+        "input": "[0,9]",
+        "output": "[15,3]"
+      },
+      {
+        "description": "STEAMING LIGHT",
+        "input": "[0,10]",
+        "output": "[15,2]"
+      },
+      {
+        "description": "STERN LIGHT",
+        "input": "[0,10]",
+        "output": "[26,2]"
+      },
+      {
+        "description": "DISCHARGE PUMP",
+        "input": "(notifications.tanks.wasteWater.0.currentLevel.override:alert and [0,11]) or ([0,11] and [0,12])",
+        "output": "[15,1]"
+      },
+      {
+        "description": "DECKWASH PUMP",
+        "input": "[0,13]",
+        "output": "[26,8]"
+      },
+      {
+        "description": "CALL FOR HW",
+        "input": "[0,14]",
+        "output": "[10,8]"
+      },
+      {
+        "description": "CALL FOR CH",
+        "input": "[0,15] or notifications.controller.heating:alert",
+        "output": "[10,7]"
+      },
+      {
+        "description": "PROPANE ISOLATOR",
+        "input": "[0,16]",
+        "output": "[15,5]"
+      },
+      {
+        "description": "TROLL VALVE FLAG",
+        "input": "[16,1]",
+        "output": ""
+      },
+      {
+        "description": "ENGINE ROOM VENTILATOR [AUTO]",
+        "input": "[16,2]",
+        "output": "[26,5]"
+      },
+      {
+        "description": "ENGINE ROOM VENTILATOR",
+        "input": "[16,3]",
+        "output": "[26,6]"
+      },
+      {
+        "description": "MAIN BILGE VENTILATOR [AUTO]",
+        "input": "[16,4]",
+        "output": ""
+      },
+      {
+        "description": "MAIN BILGE VENTILATOR",
+        "input": "[16,5]",
+        "output": ""
+      },
+      {
+        "description": "ANCHOR UP",
+        "input": "[16,6]",
+        "output": "[31,5]"
+      },
+      {
+        "input": "[16,7]",
+        "output": "[31,6]",
+        "description": "ANCHOR DOWN"
+      },
+      {
+        "input": "[16,8]",
+        "output": "[31,4]",
+        "description": "MAST UP"
+      },
+      {
+        "input": "[16,9]",
+        "output": "[31,3]",
+        "description": "MAST DOWN"
+      },
+      {
+        "input": "[16,8]",
+        "output": "[26,3]",
+        "description": "LOAD SENSE LOW"
+      },
+      {
+        "input": "[16,10] or [16,11]",
+        "output": "[26,4]",
+        "description": "LOAD SENSE HIGH"
+      },
+      {
+        "input": "notifications.control.shaftlube",
+        "output": "[26,7]",
+        "description": "SHAFT LUBRICATION"
+      },
+      {
+        "input": "[16,11]",
+        "output": "[31,8]",
+        "description": "BOW THRUST PORT"
+      },
+      {
+        "input": "[16,10]",
+        "output": "[31,7]",
+        "description": "BOW THRUST STARBOARD"
+      },
+      {
+        "input": "[16,12]",
+        "output": "[31,1]",
+        "description": "FORELOCKER HATCH OPEN"
+      },
+      {
+        "input": "[16,13]",
+        "output": "[31,2]",
+        "description": "FORELOCKER HATCH CLOSE"
+      },
+      {
+        "input": "[16,14]",
+        "output": "",
+        "description": ""
+      },
+      {
+        "input": "[16,15]",
+        "output": "",
+        "description": ""
+      },
+      {
+        "input": "[16,15]",
+        "output": "",
+        "description": ""
+      },
+      {
+        "input": "[10,7]",
+        "output": "[eth0,1]",
+        "description": "DEVANTEC RELAY 1"
+      }
+    ]
+  }
+}

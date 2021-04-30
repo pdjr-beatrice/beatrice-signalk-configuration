@@ -1,0 +1,42 @@
+{
+  "vessels": {
+    "self": {
+      "mmsi": "235115158",
+      "name": "Beatrice of Hull",
+      "design": {
+        "draft": {
+          "value": {
+            "maximum": 1.2
+          }
+        },
+        "length": {
+          "value": {
+            "overall": 19.95
+          }
+        },
+        "beam": {
+          "value": 4.8
+        },
+        "airHeight": {
+          "value": 3.55
+        },
+        "aisShipType": {
+          "value": {
+            "name": "Pleasure",
+            "id": 37
+          }
+        }
+      },
+      "sensors": {
+        "gps": {
+          "fromBow": {
+            "value": 12
+          },
+          "fromCenter": {
+            "value": -1
+          }
+        }
+      }
+    }
+  }
+}

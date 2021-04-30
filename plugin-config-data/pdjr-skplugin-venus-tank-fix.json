@@ -1,0 +1,12 @@
+{
+  "configuration": {
+    "rules": [
+      { "tankpath": "tanks.wasteWater.0", "instance": 8 },
+      { "tankpath": "tanks.freshWater.1", "instance": 9 },
+      { "tankpath": "tanks.freshWater.2", "instance": 10 },
+      { "tankpath": "tanks.fuel.3", "instance": 11 },
+      { "tankpath": "tanks.fuel.4", "instance": 12 }
+    ]
+  },
+  "enabled": true
+}

@@ -1,0 +1,146 @@
+{
+  "enabled": true,
+  "enableLogging": false,
+  "configuration": {
+    "database": {
+      "directory": "/var/spool/signalk-controller",
+      "channels": [
+        {
+          "name": "heating",
+          "group": "heating",
+          "description": "Space heating",
+          "iconUrl": null,
+          "statePath": "electrical.switches.bank.10.7.state",
+          "modePath": "notifications.controller.heating.mode",
+          "nextPath": "notifications.controller.heating.next",
+          "defaultMode": "OFF",
+          "overrides": [
+            {
+              "name": "modulate",
+              "path": "notifications.controller.heating.modulate"
+            },
+            {
+              "name": "frost",
+              "path": "notifications.controller.heating.frost"
+            }
+          ]
+        },
+        {
+          "name": "water",
+          "group": "heating",
+          "description": "Water heating",
+          "iconUrl": null,
+          "statePath": "electrical.switches.bank.10.8.state",
+          "modePath": "notifications.controller.water.mode",
+          "nextPath": "notifications.controller.water.next",
+          "defaultMode": "OFF",
+          "overrides": []
+        },
+        {
+          "name": "ensuite",
+          "group": "heating",
+          "description": "En-suite towel rail",
+          "iconUrl": null,
+          "statePath": null,
+          "modePath": null,
+          "nextPath": null,
+          "defaultMode": "OFF",
+          "overrides": []
+        },
+        {
+          "name": "dayhead",
+          "group": "heating",
+          "description": "Dayhead towel rail",
+          "iconUrl": null,
+          "statePath": null,
+          "modePath": null,
+          "nextPath": null,
+          "defaultMode": "OFF",
+          "overrides": []
+        },
+        {
+          "name": "loop",
+          "group": "heating",
+          "description": "Hot water loop",
+          "iconUrl": null,
+          "statePath": "electrical.switches.bank.26.1.state",
+          "modePath": "notifications.controller.loop.mode",
+          "nextPath": "notifications.controller.loop.next",
+          "defaultMode": "OFF",
+          "overrides": []
+        }
+      ]
+    },
+    "server": {
+      "port": 9000
+    },
+    "clients": [
+      "http://192.168.1."
+    ],
+    "seasons": [
+      {
+        "name": "summer",
+        "value": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      },
+      {
+        "name": "winter",
+        "value": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    ]
+  }
+}

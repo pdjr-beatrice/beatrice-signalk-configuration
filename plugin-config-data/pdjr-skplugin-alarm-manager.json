@@ -1,0 +1,32 @@
+{
+  "configuration": {
+    "ignorepaths": [
+      "design.",
+      "electrical.",
+      "environment.",
+      "network.",
+      "notifications.",
+      "sensors."
+    ],
+    "outputs": [
+      {
+        "switchpath": "electrical.switches.bank.usb0.1",
+        "triggerstates": [
+          "warn",
+          "alert"
+        ]
+      },
+      {
+        "switchpath": "electrical.switches.bank.usb0.2",
+        "triggerstates": [
+          "alarm",
+          "emergency"
+        ]
+      }
+    ],
+    "starton": "notifications.plugins.pdjr-skplugin-meta-injector.notification"
+  },
+  "enabled": true,
+  "enableLogging": false,
+  "enableDebug": false
+}

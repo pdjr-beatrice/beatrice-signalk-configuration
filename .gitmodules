@@ -1,0 +1,3 @@
+[submodule "node_modules/pdjr-skplugin-alarm-manager"]
+	path = node_modules/pdjr-skplugin-alarm-manager
+	url = https://github.com/preeve9534/pdjr-skplugin-alarm-manager
